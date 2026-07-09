@@ -1,0 +1,31 @@
+{
+  "product": "PublicData Atlas BR",
+  "phase": "lab-demo",
+  "domain": "education",
+  "question_pt": "Quais UFs concentram IDEB mais alto em 2023 — e quão confiáveis são as duas fontes sintéticas usadas neste lab?",
+  "sources": [
+    {
+      "id": "seed_ideb_uf_v1",
+      "quality_score": 94.0,
+      "dimensions": {
+        "completeness": 0.96,
+        "freshness": 0.88,
+        "consistency": 0.93,
+        "coverage": 1.0,
+        "lineage": 0.95
+      }
+    },
+    {
+      "id": "seed_matriculas_uf_v1",
+      "quality_score": 81.5,
+      "dimensions": {
+        "completeness": 0.78,
+        "freshness": 0.82,
+        "consistency": 0.74,
+        "coverage": 0.89,
+        "lineage": 0.9
+      }
+    }
+  ],
+  "notice": "Synthetic lab demo. Not official Inep/IBGE data."
+}

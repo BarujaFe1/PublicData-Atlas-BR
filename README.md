@@ -7,6 +7,7 @@
   <p><strong>Ingestion, quality scoring, geovisualization and responsible storytelling for Brazilian open data.</strong></p>
 
   <p>
+    <a href="#-live-demo"><strong>Live Demo</strong></a> •
     <a href="#-visão-geral--overview">PT-BR / English Overview</a> •
     <a href="#-product-preview">Preview</a> •
     <a href="#-screenshots">Screenshots</a> •
@@ -14,6 +15,11 @@
     <a href="#-arquitetura--architecture">Architecture</a> •
     <a href="#-quick-start--início-rápido">Quick Start</a> •
     <a href="#-autor--author">Author</a>
+  </p>
+
+  <p>
+    <a href="https://publicdata-atlas-br.vercel.app"><img alt="Live Demo" src="https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" /></a>
+    <img alt="Lab Demo" src="https://img.shields.io/badge/Status-Lab%20Demo-0F766E?style=for-the-badge" />
   </p>
 
   <p>
@@ -30,6 +36,20 @@
 <p align="center">
   <img src="./assets/hero-cover.png" alt="PublicData Atlas BR product overview" width="100%" />
 </p>
+
+---
+
+## 🌐 Live Demo
+
+**Demo pública (lab):** [https://publicdata-atlas-br.vercel.app](https://publicdata-atlas-br.vercel.app)
+
+O que a demo inclui hoje:
+- 2 fontes sintéticas de educação (UF) com **Quality Score** dimensional
+- **Mapa esquemático** + ranking metodológico (IDEB lab)
+- **Relatório metodológico** curto com limitações explícitas
+- Diferenciação clara vs [Public Data Quality Auditor BR](https://github.com/BarujaFe1/public-data-quality-auditor-br) (Atlas = mapa/indicadores; Auditor = checks/issues)
+
+> Lab demo com dados sintéticos. Não é publicação oficial Inep/IBGE.
 
 ---
 
@@ -314,34 +334,31 @@ Public report / dictionary / portfolio narrative
 - **Python** v3.10+ (preferencialmente 3.12)
 - **Git**
 
-### Opção 1 — Execução integrada no Windows
+### Opção 1 — Lab demo (recomendado)
 Na pasta raiz:
 ```bash
 start.bat
 ```
-O script cria o venv, instala dependências, sobe FastAPI (`8000`) e Next.js (`3000`).
+Sobe o frontend Next.js da demo lab em [http://localhost:3000](http://localhost:3000).
 
-### Opção 2 — Execução manual
-
-#### 1. Backend FastAPI
-```bash
-cd backend
-python -m venv .venv
-.venv\Scripts\activate            # Windows
-source .venv/bin/activate          # Linux/macOS
-pip install -r requirements.txt
-cd ..
-backend\.venv\Scripts\python.exe -m uvicorn backend.main:app --reload --port 8000
-```
-*API em [http://127.0.0.1:8000](http://127.0.0.1:8000) — docs em `/docs`.*
-
-#### 2. Frontend Next.js
+### Opção 2 — Manual (frontend)
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-*Frontend em [http://localhost:3000](http://localhost:3000).*
+
+### Opção 3 — API opcional (meta/quality)
+```bash
+cd backend
+python -m venv .venv
+.venv\Scripts\activate            # Windows
+pip install -r requirements.txt
+cd ..
+backend\.venv\Scripts\python.exe -m uvicorn backend.main:app --reload --port 8000
+```
+
+A **demo pública na Vercel** é frontend-only (seeds embutidos). A API FastAPI é scaffold local para evolução.
 
 Copie `.env.example` / `frontend/.env.example` conforme necessário. **Nunca** commite segredos.
 

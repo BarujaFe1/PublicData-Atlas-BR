@@ -1,0 +1,28 @@
+uf,name,region,year,ideb,enrollment_rate,schools,source_id
+AC,Acre,Norte,2023,4.6,0.91,1480,seed_ideb_uf_v1
+AL,Alagoas,Nordeste,2023,4.4,0.88,3120,seed_ideb_uf_v1
+AP,Amapá,Norte,2023,4.3,,980,seed_matriculas_uf_v1
+AM,Amazonas,Norte,2023,4.5,0.86,5210,seed_ideb_uf_v1
+BA,Bahia,Nordeste,2023,4.7,0.90,18400,seed_ideb_uf_v1
+CE,Ceará,Nordeste,2023,5.6,0.94,9800,seed_ideb_uf_v1
+DF,Distrito Federal,Centro-Oeste,2023,5.8,0.96,920,seed_ideb_uf_v1
+ES,Espírito Santo,Sudeste,2023,5.5,0.95,4100,seed_ideb_uf_v1
+GO,Goiás,Centro-Oeste,2023,5.3,0.93,6200,seed_ideb_uf_v1
+MA,Maranhão,Nordeste,2023,4.2,0.84,11200,seed_ideb_uf_v1
+MT,Mato Grosso,Centro-Oeste,2023,5.1,0.92,4300,seed_ideb_uf_v1
+MS,Mato Grosso do Sul,Centro-Oeste,2023,5.2,0.93,2800,seed_ideb_uf_v1
+MG,Minas Gerais,Sudeste,2023,5.7,0.95,22100,seed_ideb_uf_v1
+PA,Pará,Norte,2023,4.4,0.85,9800,seed_ideb_uf_v1
+PB,Paraíba,Nordeste,2023,4.8,0.90,5400,seed_ideb_uf_v1
+PR,Paraná,Sul,2023,5.9,0.96,9800,seed_ideb_uf_v1
+PE,Pernambuco,Nordeste,2023,5.0,0.91,10200,seed_ideb_uf_v1
+PI,Piauí,Nordeste,2023,4.6,,6100,seed_matriculas_uf_v1
+RJ,Rio de Janeiro,Sudeste,2023,5.4,0.94,11200,seed_ideb_uf_v1
+RN,Rio Grande do Norte,Nordeste,2023,4.9,0.90,4300,seed_ideb_uf_v1
+RS,Rio Grande do Sul,Sul,2023,5.8,0.95,11800,seed_ideb_uf_v1
+RO,Rondônia,Norte,2023,4.8,0.90,2100,seed_ideb_uf_v1
+RR,Roraima,Norte,2023,,0.87,720,seed_ideb_uf_v1
+SC,Santa Catarina,Sul,2023,6.1,0.97,7200,seed_ideb_uf_v1
+SP,São Paulo,Sudeste,2023,5.9,0.96,28500,seed_ideb_uf_v1
+SE,Sergipe,Nordeste,2023,4.5,,2400,seed_matriculas_uf_v1
+TO,Tocantins,Norte,2023,4.9,0.89,2600,seed_ideb_uf_v1

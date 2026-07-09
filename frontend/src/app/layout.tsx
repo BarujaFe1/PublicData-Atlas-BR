@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PublicData Atlas BR",
+  title: "PublicData Atlas BR — Lab Demo",
   description:
-    "Ingestão, qualidade e visualização de dados públicos brasileiros.",
+    "Brazilian open-data atlas lab: quality scores, UF indicators, schematic map and methodological report.",
+  openGraph: {
+    title: "PublicData Atlas BR",
+    description:
+      "Civic atlas lab for Brazilian open data — map, indicators and explicit quality.",
+  },
 };
 
 export default function RootLayout({
@@ -11,9 +17,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
-      <body style={{ margin: 0, background: "#f8fafc", color: "#0b1f33" }}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
