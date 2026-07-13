@@ -43,6 +43,15 @@ export type DemoBundle = {
   limitationsEn: string[];
 };
 
+/** Keep TS and Python weights in sync (see docs/TECHNICAL_DECISIONS.md). */
+export const QUALITY_WEIGHTS = {
+  completeness: 0.25,
+  freshness: 0.2,
+  consistency: 0.25,
+  coverage: 0.15,
+  lineage: 0.15,
+} as const;
+
 /** Schematic map anchors (viewBox 0 0 400 420) for UF choropleth lab demo. */
 export const UF_MAP_ANCHORS: Record<string, { x: number; y: number; r?: number }> = {
   RR: { x: 145, y: 48 },
@@ -74,13 +83,25 @@ export const UF_MAP_ANCHORS: Record<string, { x: number; y: number; r?: number }
   RS: { x: 220, y: 370 },
 };
 
+function clamp01(n: number): number {
+  if (Number.isNaN(n)) return 0;
+  return Math.max(0, Math.min(1, n));
+}
+
 export function scoreQuality(d: QualityDimensions): number {
+  const dims = {
+    completeness: clamp01(d.completeness),
+    freshness: clamp01(d.freshness),
+    consistency: clamp01(d.consistency),
+    coverage: clamp01(d.coverage),
+    lineage: clamp01(d.lineage),
+  };
   const total =
-    d.completeness * 0.25 +
-    d.freshness * 0.2 +
-    d.consistency * 0.25 +
-    d.coverage * 0.15 +
-    d.lineage * 0.15;
+    dims.completeness * QUALITY_WEIGHTS.completeness +
+    dims.freshness * QUALITY_WEIGHTS.freshness +
+    dims.consistency * QUALITY_WEIGHTS.consistency +
+    dims.coverage * QUALITY_WEIGHTS.coverage +
+    dims.lineage * QUALITY_WEIGHTS.lineage;
   return Math.round(Math.max(0, Math.min(100, total * 100)) * 10) / 10;
 }
 
@@ -188,17 +209,31 @@ export function rankingByIdeb(indicators: UfIndicator[]) {
     .map((r, i) => ({ rank: i + 1, ...r }));
 }
 
-export function idebExtent(indicators: UfIndicator[]) {
+export function idebExtent(indicators: UfIndicator[]): { min: number; max: number } {
   const vals = indicators.map((r) => r.ideb).filter((v): v is number => v != null);
+  if (vals.length === 0) return { min: 0, max: 1 };
   return { min: Math.min(...vals), max: Math.max(...vals) };
 }
 
 export function colorForIdeb(value: number | null, min: number, max: number): string {
   if (value == null) return "#94a3b8";
   const t = max === min ? 0.5 : (value - min) / (max - min);
-  // teal scale
   const r = Math.round(15 + (4 - 15) * t);
   const g = Math.round(118 + (180 - 118) * t);
   const b = Math.round(110 + (140 - 110) * t);
   return `rgb(${r},${g},${b})`;
+}
+
+export function averageSourceScore(sources: SourceMeta[]): number {
+  if (sources.length === 0) return 0;
+  const sum = sources.reduce((acc, s) => acc + scoreQuality(s.dimensions), 0);
+  return Math.round((sum / sources.length) * 10) / 10;
+}
+
+export function missingIdebUfs(indicators: UfIndicator[]): string[] {
+  return indicators.filter((r) => r.ideb == null).map((r) => r.uf);
+}
+
+export function missingEnrollmentUfs(indicators: UfIndicator[]): string[] {
+  return indicators.filter((r) => r.enrollmentRate == null).map((r) => r.uf);
 }
