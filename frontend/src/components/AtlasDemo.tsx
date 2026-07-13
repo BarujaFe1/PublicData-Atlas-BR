@@ -148,7 +148,7 @@ export default function AtlasDemo() {
           {lang === "pt" ? "Desenvolvido por" : "Built by"}{" "}
           <strong>Felipe Alirio Baruja</strong> ·{" "}
           <a href="https://github.com/BarujaFe1/PublicData-Atlas-BR">GitHub</a> ·{" "}
-          <a href="https://publicdata-atlas-br.vercel.app">Live Demo</a> ·{" "}
+          <a href="https://publicdata-atlas-br-nu.vercel.app">Live Demo</a> ·{" "}
           <a href="https://barujafe.vercel.app">Portfolio</a>
         </p>
       </footer>

@@ -4,7 +4,7 @@
   <p><strong>Atlas cívico de dados públicos: qualidade de fontes, indicadores territoriais e relatório metodológico.</strong></p>
   <p><em>Civic open-data atlas: source quality, territorial indicators and methodological reporting.</em></p>
   <p>
-    <a href="https://publicdata-atlas-br.vercel.app"><strong>Live Demo</strong></a> ·
+    <a href="https://publicdata-atlas-br-nu.vercel.app"><strong>Live Demo</strong></a> ·
     <a href="#problema">Problema</a> ·
     <a href="#solução">Solução</a> ·
     <a href="#stack">Stack</a> ·
@@ -30,9 +30,11 @@
 
 **Lab demo pública** com domínio **educação (UF)**, 2 fontes sintéticas, Quality Score dimensional, mapa esquemático, ranking e relatório com limitações explícitas.
 
-- Live: https://publicdata-atlas-br.vercel.app  
+- Live: https://publicdata-atlas-br-nu.vercel.app  
 - Escopo deliberadamente estreito (1 domínio, 1 pergunta forte)  
 - **Não** é publicação oficial Inep/IBGE  
+
+> **Nota de deploy:** o alias legado `publicdata-atlas-br.vercel.app` ficou em outra conta Vercel e pode servir build antigo. Use o link canônico acima. 
 
 ---
 

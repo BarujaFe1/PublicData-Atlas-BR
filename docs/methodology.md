@@ -10,13 +10,25 @@
 
 ## Pipeline analítico
 
+**Lab demo atual (implementado):**
+
+```txt
+Synthetic versioned seeds (CSV/JSON)
+  → Dimensional Quality Score
+  → UF indicators + methodological ranking
+  → Schematic map explorer (SVG anchors)
+  → Public methodological report
+```
+
+**Target architecture (roadmap — not live yet):**
+
 ```txt
 Fonte aberta (CSV/API)
   → Ingestão Python (Polars/Pandas)
   → Validação de schema + checks de qualidade
   → Camada DuckDB (bronze → silver → gold)
   → Indicadores + ranking metodológico
-  → MapLibre / explorer municipal
+  → MapLibre / geometria IBGE
   → Relatório público + dicionário de dados
 ```
 
