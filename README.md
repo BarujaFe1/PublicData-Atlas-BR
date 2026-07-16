@@ -3,484 +3,256 @@
 
   <h1>PublicData Atlas BR</h1>
 
-  <p><strong>Ingestão, qualidade, geovisualização e narrativa responsável para dados públicos brasileiros.</strong></p>
-  <p><strong>Ingestion, quality scoring, geovisualization and responsible storytelling for Brazilian open data.</strong></p>
+  <p><strong>Atlas cívico de dados abertos BR — scores de qualidade, indicadores por UF, mapa e relatório metodológico.</strong></p>
+  <p><strong>Civic atlas of Brazilian open data — quality scores, UF indicators, map and methodological report.</strong></p>
 
   <p>
-    <a href="#-live-demo"><strong>Live Demo</strong></a> •
-    <a href="#-visão-geral--overview">PT-BR / English Overview</a> •
-    <a href="#-product-preview">Preview</a> •
-    <a href="#-screenshots">Screenshots</a> •
-    <a href="#-stack--tecnologias">Stack</a> •
-    <a href="#-arquitetura--architecture">Architecture</a> •
-    <a href="#-quick-start--início-rápido">Quick Start</a> •
-    <a href="#-autor--author">Author</a>
+    <a href="#pt-br">PT-BR</a> ·
+    <a href="#en">English</a> ·
+    <a href="#live-demo">Live Demo</a> ·
+    <a href="#stack--tecnologias">Stack</a> ·
+    <a href="#arquitetura--architecture">Architecture</a> ·
+    <a href="#quick-start--início-rápido">Quick Start</a> ·
+    <a href="#autor--author">Author</a>
   </p>
 
   <p>
-    <a href="https://publicdata-atlas-br.vercel.app"><img alt="Live Demo" src="https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" /></a>
-    <img alt="Lab Demo" src="https://img.shields.io/badge/Status-Lab%20Demo-0F766E?style=for-the-badge" />
-  </p>
-
-  <p>
+    <a href="https://publicdata-atlas-br.vercel.app"><img alt="Live Demo" src="https://img.shields.io/badge/Live%20Demo-publicdata--atlas--br.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white" /></a>
     <img alt="Next.js" src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=nextdotjs" />
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-React-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-    <img alt="Python" src="https://img.shields.io/badge/Python-Ingestion-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+    <img alt="Python" src="https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" />
     <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-API-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-    <img alt="DuckDB" src="https://img.shields.io/badge/DuckDB-Analytics-FFF000?style=for-the-badge&logo=duckdb&logoColor=black" />
-    <img alt="MapLibre" src="https://img.shields.io/badge/MapLibre-Geovis-7EBC6F?style=for-the-badge" />
-    <img alt="Open Data" src="https://img.shields.io/badge/Open%20Data-BR%20Civic%20Tech-0F766E?style=for-the-badge" />
+    <img alt="Lab Demo" src="https://img.shields.io/badge/Status-Lab%20demo-2563EB?style=for-the-badge" />
+    <img alt="MIT" src="https://img.shields.io/badge/License-MIT-111827?style=for-the-badge" />
+  </p>
+
+  <p>
+    <a href="https://publicdata-atlas-br.vercel.app"><strong>Live Demo</strong></a> ·
+    <a href="https://github.com/BarujaFe1/PublicData-Atlas-BR"><strong>Repositório</strong></a> ·
+    <a href="https://barujafe.vercel.app/"><strong>Portfólio</strong></a> ·
+    <a href="https://www.linkedin.com/in/barujafe/"><strong>LinkedIn</strong></a>
   </p>
 </div>
 
 <p align="center">
-  <img src="./assets/hero-cover.png" alt="PublicData Atlas BR product overview" width="100%" />
+  <img src="./assets/hero-cover.png" alt="PublicData Atlas BR overview" width="100%" />
 </p>
 
 ---
 
-## 🌐 Live Demo
+<a id="pt-br"></a>
 
-**Demo pública (lab):** [https://publicdata-atlas-br.vercel.app](https://publicdata-atlas-br.vercel.app)
+## PT-BR
 
-O que a demo inclui hoje:
-- 2 fontes sintéticas de educação (UF) com **Quality Score** dimensional
-- **Mapa esquemático** + ranking metodológico (IDEB lab)
-- **Relatório metodológico** curto com limitações explícitas
-- Diferenciação clara vs [Public Data Quality Auditor BR](https://github.com/BarujaFe1/public-data-quality-auditor-br) (Atlas = mapa/indicadores; Auditor = checks/issues)
+## Visão geral
 
-> Lab demo com dados sintéticos. Não é publicação oficial Inep/IBGE.
+**PublicData Atlas BR** é um lab de atlas cívico: qualidade de fontes, indicadores por UF, mapa esquemático e relatório metodológico — com seeds sintéticos de educação para demo segura.
+
+> **Aviso de lab:** demo de portfólio com dados sintéticos/amostra. Não é produto em produção com SLA, integrações reais de clientes ou garantia operacional.
 
 ---
 
-## 1. Visão Geral / Overview
+## Problema
 
-O **PublicData Atlas BR** é um produto público criado para transformar dados abertos brasileiros fragmentados em um atlas analítico navegável: com qualidade explícita, indicadores rastreáveis, mapa interativo e relatório metodológico.
-
-Ele organiza um fluxo de **ingestão, validação, pontuação de qualidade, construção de indicadores, geovisualização, ranking metodológico e publicação de relatório**. Em vez de tratar CSVs e APIs públicas como arquivos isolados, o Atlas os converte em um produto cívico com linhagem, lacunas e limites de interpretação.
-
-O projeto foi desenvolvido por **Felipe Alirio Baruja** como peça de portfólio, combinando engenharia de dados, produto analítico e civic-tech visual.
-
-> **Responsible Open Data Notice**  
-> O PublicData Atlas BR foi criado para exploração agregada, auditoria de qualidade e apoio à leitura pública de dados. Ele **não deve** ser usado para ranquear pessoas, automatizar sanções individuais ou substituir análise institucional oficial.
+Dados abertos brasileiros existem, mas qualidade, cobertura e metodologia raramente aparecem juntas em uma narrativa auditável.
 
 ---
 
-## ✨ Product Preview
+## Para quem
 
-<p align="center">
-  <img src="./assets/screenshots/01-hero-atlas-overview.png" alt="PublicData Atlas BR Overview" width="100%" />
-</p>
-
-O Atlas apresenta uma experiência civic-tech premium: mapa do Brasil, Quality Score por fonte, indicadores temporais, explorer municipal, selos de qualidade e narrativa editorial com metodologia transparente.
+- Jornalistas de dados e civic tech
+- Analistas de políticas públicas
+- Engenheiros interessados em open data BR
 
 ---
 
-## 2. Por que este projeto importa? / Why this project matters
+## Funcionalidades
 
-* **Dados públicos são úteis, mas frágeis:** fontes mudam, schemas quebram e métricas chegam sem contexto.
-* **Decisão sem qualidade é risco:** gestores, jornalistas e pesquisadores precisam ver lacunas, não só gráficos bonitos.
-* **Geovisualização com governança:** mapa e ranking só fazem sentido com dicionário, versão da fonte e limites explícitos.
-* **Produto, não notebook:** o Atlas demonstra ingestão real, qualidade, UI e documentação em um artefato público memorável.
-
----
-
-## 🧠 O diferencial do PublicData Atlas BR / What makes it different
-
-### Português
-O PublicData Atlas BR não é apenas um dashboard de dados abertos. Ele combina qualidade de fonte, indicadores metodológicos e geovisualização em uma experiência rastreável.
-
-Ele mostra não apenas o valor do indicador, mas também:
-- quão confiável a fonte está;
-- o que foi validado ou sinalizado;
-- quais lacunas geográficas ou temporais existem;
-- como o ranking foi construído;
-- onde a interpretação precisa ser limitada;
-- qual versão da fonte alimentou o recorte.
-
-### English
-PublicData Atlas BR is not just an open-data dashboard. It combines source quality, methodological indicators and geovisualization into one traceable experience.
-
-It shows not only indicator values, but also:
-- how reliable each source is;
-- what was validated or flagged;
-- which geographic or temporal gaps exist;
-- how rankings were constructed;
-- where interpretation must be limited;
-- which source version powered the view.
+- Score de qualidade por fonte
+- Indicadores por UF
+- Mapa esquemático
+- Relatório metodológico
+- Camadas bronze/silver/gold + seeds
 
 ---
 
-## 🎯 Problema que resolve / The problem it solves
+## Escopo e limites
 
-Em fluxos reais de dados públicos brasileiros, é comum encontrar:
-- fontes fragmentadas e mal documentadas;
-- schemas instáveis entre coletas;
-- indicadores sem definição clara;
-- mapas sem nota metodológica;
-- rankings sem transparência de cálculo;
-- ausência de score de qualidade por fonte;
-- relatórios que mostram números sem explicar limites;
-- dificuldade de comparar municípios/estados com contexto.
-
-O **PublicData Atlas BR** cria uma camada organizada entre o dado aberto bruto e a leitura analítica pública.
+- **É:** lab cívico com seeds sintéticos de educação.
+- **Não é:** portal oficial de governo, dados em tempo real de todas as UFs, BI enterprise.
 
 ---
 
-## 🧩 Proposta / Analytical Pipeline
+<a id="en"></a>
 
-O Atlas processa fontes abertas e entrega indicadores, qualidade, mapa e relatório:
+## English
 
-```txt
-Open Data Sources (CSV / API)
-  ↓
-Python ingestion (Pandas / Polars)
-  ↓
-Schema validation & quality checks
-  ↓
-DuckDB layers (bronze → silver → gold)
-  ↓
-Indicators + methodological ranking
-  ↓
-MapLibre explorer (UF / município)
-  ↓
-Public report + data dictionary
-```
+## Overview
+
+**PublicData Atlas BR** is a civic-atlas lab: source quality, UF indicators, schematic map and methodological report — with synthetic education seeds for a safe demo.
+
+> **Lab notice:** portfolio demo with synthetic/sample data. Not a production product with SLA, real customer integrations, or operational guarantees.
 
 ---
 
-## 📸 Screenshots
+## Problem
 
-<table>
-  <tr>
-    <td width="50%">
-      <img src="./assets/screenshots/02-quality-cockpit.png" alt="Quality Cockpit" />
-      <br />
-      <sub><strong>Quality Cockpit</strong> — score por fonte, completude, atualidade e alertas de qualidade.</sub>
-    </td>
-    <td width="50%">
-      <img src="./assets/screenshots/03-map-explorer.png" alt="Map Explorer" />
-      <br />
-      <sub><strong>Map Explorer</strong> — coroplético interativo com legenda, tooltip e navegação geográfica.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="./assets/screenshots/04-ranking-temporal.png" alt="Ranking and Temporal Indicators" />
-      <br />
-      <sub><strong>Ranking & Temporal</strong> — ordenação metodológica e série histórica do indicador.</sub>
-    </td>
-    <td width="50%">
-      <img src="./assets/screenshots/05-methodology-dictionary.png" alt="Methodology and Data Dictionary" />
-      <br />
-      <sub><strong>Methodology & Dictionary</strong> — notas metodológicas, versionamento e dicionário de dados.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="./assets/screenshots/06-public-report.png" alt="Public Analytical Report" />
-      <br />
-      <sub><strong>Public Report</strong> — síntese executiva com achados, mapa, selos e limitações.</sub>
-    </td>
-    <td width="50%">
-      <img src="./assets/screenshots/01-hero-atlas-overview.png" alt="Atlas Overview" />
-      <br />
-      <sub><strong>Atlas Overview</strong> — briefing inicial com cobertura, frescor e Quality Score.</sub>
-    </td>
-  </tr>
-</table>
+Brazilian open data exists, but quality, coverage and methodology rarely appear together in an auditable narrative.
 
 ---
 
-## 📄 Relatório Público / Public Report
+## Who it is for
 
-<p align="center">
-  <img src="./assets/screenshots/06-public-report.png" alt="PublicData Atlas BR public report" width="70%" />
-</p>
-
-O relatório público consolida Quality Score, indicadores-chave, mapa, ranking metodológico, dicionário de dados e limitações em um artefato pronto para leitura cívica e portfólio.
+- Data journalists and civic-tech builders
+- Public-policy analysts
+- Engineers interested in Brazilian open data
 
 ---
 
-## 📌 Estudo de Caso / Case Study
+## Features
 
-### 📌 Estudo de Caso: Educação (MVP)
-O MVP foca em **um domínio** (educação) e **uma pergunta forte**, ingerindo **2–3 fontes** abertas versionadas. O pipeline valida schema, calcula Quality Score por fonte, materializa indicadores em DuckDB, publica mapa/ranking e documenta lacunas.
-
-A proposta evita cobrir o Brasil inteiro em todos os temas no primeiro release. Controle de risco: domínio único, fontes versionadas e metodologia transparente.
-
-### 📌 Case Study: Education (MVP)
-The MVP focuses on **one domain** (education) and **one strong question**, ingesting **2–3** versioned open sources. The pipeline validates schemas, computes per-source Quality Scores, materializes indicators in DuckDB, publishes map/ranking views and documents gaps.
-
-It deliberately avoids nationwide multi-domain coverage in the first release. Risk control: single domain, versioned sources and transparent methodology.
+- Per-source quality score
+- UF indicators
+- Schematic map
+- Methodological report
+- Bronze/silver/gold layers + seeds
 
 ---
 
-## 🧭 Visual Story / Jornada Analítica
+## Scope and limits
 
-A experiência do Atlas foi pensada como uma jornada cívica guiada:
-```txt
-1. Abrir o briefing do domínio (educação) e ver cobertura + Quality Score
-2. Inspecionar o Quality Cockpit por fonte
-3. Explorar o mapa interativo (UF → município)
-4. Ler o ranking metodológico e a série temporal
-5. Abrir metodologia e data dictionary
-6. Exportar / ler o relatório público com limitações explícitas
-```
+- **Is:** civic lab with synthetic education seeds.
+- **Is not:** official government portal, realtime all-UF feeds, enterprise BI.
 
 ---
 
-## ⚙️ Funcionalidades Principais / Core Features
+<a id="live-demo"></a>
 
-### Atlas Briefing
-Painel inicial com domínio ativo, volume ingerido, cobertura geográfica, frescor das fontes e badges de qualidade.
+## Live Demo
 
-### Source Quality Score
-Pontuação explicável por fonte (completude, atualidade, consistência, cobertura e rastreabilidade).
+**URL:** [https://publicdata-atlas-br.vercel.app](https://publicdata-atlas-br.vercel.app)
 
-### Map Explorer
-Mapa interativo (MapLibre) com coroplético, legenda e navegação por município/estado.
+Demo hospedada para avaliação de portfólio / Hosted for portfolio review.
 
-### Methodological Ranking
-Ranking com regra documentada — não é “score mágico”, é indicador com nota metodológica.
-
-### Temporal Indicators
-Série histórica para acompanhar tendência e quebras de série.
-
-### Public Report + Data Dictionary
-Relatório legível + dicionário de campos, versões de fonte e limites de uso.
+> Lab demo — synthetic / sample data unless noted. Not a production SLA product.
 
 ---
 
-## 🛠️ Stack / Tecnologias
+<a id="stack--tecnologias"></a>
+
+## Stack / Tecnologias
+
+| Tecnologia | Uso no projeto |
+|---|---|
+| Next.js 15 / React 19 / TypeScript | Frontend |
+| FastAPI / Pandas / Polars / DuckDB | Backend analítico |
+| Pytest / httpx | Testes |
+
+---
+
+<a id="arquitetura--architecture"></a>
+
+## Arquitetura / Architecture
+
+Separação ackend/ + rontend/ com pipeline de dados em data/ (raw → bronze → silver → gold).
+
+`	xt
+PublicData-Atlas-BR/
+├── backend/
+├── frontend/
+├── data/
+│   ├── raw/ bronze/ silver/ gold/ seed/
+├── assets/
+├── docs/
+├── scripts/
+└── start.bat
+`
+
+---
+
+<a id="quick-start--início-rápido"></a>
+
+## Quick Start / Início rápido
+
+### Pré-requisitos / Requirements
+
+- Node.js 20+
+- Python 3.12+
+- npm
+
+### Clonar / Clone
+
+`ash
+git clone https://github.com/BarujaFe1/PublicData-Atlas-BR.git
+cd PublicData-Atlas-BR
+`
+
+### Backend
+
+`ash
+cd backend
+python -m venv .venv
+# activate venv
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
+`
 
 ### Frontend
-- **Framework:** Next.js 15 (App Router) & React 19
-- **Linguagem:** TypeScript
-- **Mapas:** MapLibre GL
-- **Estilização:** CSS moderno / design civic-tech
 
-### Backend & Dados
-- **API:** FastAPI & Uvicorn (Python)
-- **Processamento:** Pandas / Polars
-- **Analytics store:** DuckDB (camadas bronze/silver/gold)
-- **Qualidade:** checks dimensionais + score explicável
-- **Testes:** Pytest
-- **Deploy alvo:** Vercel (web) + jobs via GitHub Actions/cron
-
----
-
-## 🧱 Arquitetura / Architecture
-
-O projeto adota monorepo desacoplado:
-
-```text
-PublicData-Atlas-BR/
-├── frontend/                    # Next.js (App Router)
-│   └── src/app/                 # Páginas do atlas
-├── backend/                     # FastAPI + serviços
-│   ├── main.py                  # Health / meta
-│   ├── services/                # Quality score e helpers
-│   ├── ingestion/               # Conectores de fontes
-│   └── tests/                   # Pytest
-├── data/
-│   ├── raw/ bronze/ silver/ gold/
-│   └── seed/                    # Seeds controladas
-├── docs/                        # Metodologia e dicionário
-├── assets/                      # Ícone, hero, screenshots
-├── scripts/                     # Utilitários
-├── start.bat                    # Bootstrap local (Windows)
-└── README.md
-```
-
----
-
-## 🧱 Visual Architecture
-
-<p align="center">
-  <img src="./assets/architecture-pipeline.png" alt="PublicData Atlas BR visual architecture" width="100%" />
-</p>
-
-PublicData Atlas BR follows a traceable civic-data flow: open sources enter ingestion, get validated and scored, land in DuckDB layers, become indicators and maps, then ship as a public methodological report.
-
----
-
-## 🔁 Data Flow Pipeline
-
-```txt
-Raw Open Data
-  ↓
-Ingestion + source versioning
-  ↓
-Schema validation
-  ↓
-Quality dimensions & Quality Score
-  ↓
-Bronze → Silver → Gold (DuckDB)
-  ↓
-Indicators + ranking rules
-  ↓
-MapLibre / municipal explorer
-  ↓
-Public report / dictionary / portfolio narrative
-```
-
----
-
-## 🚀 Quick Start / Início Rápido
-
-### Pré-requisitos
-- **Node.js** v20 ou superior
-- **Python** v3.10+ (preferencialmente 3.12)
-- **Git**
-
-### Opção 1 — Lab demo (recomendado)
-Na pasta raiz:
-```bash
-start.bat
-```
-Sobe o frontend Next.js da demo lab em [http://localhost:3000](http://localhost:3000).
-
-### Opção 2 — Manual (frontend)
-```bash
+`ash
 cd frontend
 npm install
 npm run dev
-```
+`
 
-### Opção 3 — API opcional (meta/quality)
-```bash
-cd backend
-python -m venv .venv
-.venv\Scripts\activate            # Windows
-pip install -r requirements.txt
-cd ..
-backend\.venv\Scripts\python.exe -m uvicorn backend.main:app --reload --port 8000
-```
+Ou use start.bat no Windows.
 
-A **demo pública na Vercel** é frontend-only (seeds embutidos). A API FastAPI é scaffold local para evolução.
-
-Copie `.env.example` / `frontend/.env.example` conforme necessário. **Nunca** commite segredos.
 
 ---
 
-## 🧪 Scripts e Testes / Scripts and Testing
+## Technical decisions / Decisões técnicas
 
-### Backend
-```bash
-cd backend
-.venv\Scripts\python -m pytest
-```
-
-### Frontend
-```bash
-cd frontend
-npm run lint
-npm run build
-```
+- **Polars/DuckDB** para camadas analíticas leves.
+- **Seeds sintéticos** — honestidade sobre não ser feed oficial.
+- **Relatório metodológico** como artefato de confiança.
 
 ---
 
-## 📊 Metodologia / Methodology
+## Roadmap
 
-O Atlas prioriza transparência metodológica:
-* **Domínio único no MVP** para controlar escopo
-* **Fontes versionadas** (URL, coleta, hash, schema)
-* **Quality Score dimensional** (completude, atualidade, consistência, cobertura, linhagem)
-* **Ranking com regra explícita** e limitações publicadas
-* **Sem PII individual** no recorte analítico
+### Implementado
+- Scores, UF, mapa, relatório, demo Vercel
 
-Detalhes em [`docs/methodology.md`](./docs/methodology.md) e [`docs/data-dictionary.md`](./docs/data-dictionary.md).
-
----
-
-## 🛡️ Segurança, Ética e Boas Práticas
-
-* **Agregados públicos** — foco em indicadores territoriais, não indivíduos
-* **Segredos fora do Git** — `.env*` ignorado; apenas `.env.example`
-* **Limites visíveis** — lacunas e quebras de série aparecem no produto
-* **Antiescopo claro** — não é portal oficial do governo nem motor de decisão automatizada sobre pessoas
+### Planejado
+- Mais temas além de educação
+- Ingestão documentada de fontes reais (com cache)
+- Comparativos temporais
 
 ---
 
-## 🧭 Roadmap do Produto
+<a id="autor--author"></a>
 
-* **MVP:** 1 domínio, 2–3 fontes, qualidade, indicadores, mapa, ranking, relatório
-* **Fase 2:** mais fontes, atualização periódica, páginas por município/UF, diff temporal, alertas de atualização
-* **Fase 3:** API pública, download tratado, comparação entre fontes, colaboração comunitária
-* **Fora de escopo do MVP:** cobrir o Brasil inteiro em todos os temas
+## Autor / Author
 
----
+Developed by **Felipe Alirio Baruja**.
 
-## 💼 Valor para Portfólio / Portfolio Value
-
-O PublicData Atlas BR demonstra competências para **Analytics Engineering, Data Product e Civic Tech**:
-- ingestão de dados reais bagunçados;
-- qualidade e governança de fontes;
-- geovisualização e storytelling;
-- documentação metodológica;
-- produto público memorável e socialmente relevante.
+- **Portfolio:** [https://barujafe.vercel.app/](https://barujafe.vercel.app/)
+- **GitHub:** [github.com/BarujaFe1](https://github.com/BarujaFe1)
+- **LinkedIn:** [linkedin.com/in/barujafe](https://www.linkedin.com/in/barujafe/)
+- **Repository:** [github.com/BarujaFe1/PublicData-Atlas-BR](https://github.com/BarujaFe1/PublicData-Atlas-BR)
 
 ---
 
-## 📚 Documentação Complementar
+## License / Licença
 
-- [docs/methodology.md](./docs/methodology.md) — pipeline, pesos de qualidade e limites
-- [docs/data-dictionary.md](./docs/data-dictionary.md) — campos do modelo analítico
-- [docs/portfolio-pitch.md](./docs/portfolio-pitch.md) — narrativa de portfólio
+MIT License.
 
----
-
-## 🖼️ GitHub Social Preview
-
-Uma imagem para visualização social está disponível em:
-```txt
-assets/social-preview.png
-```
-*Dimensão recomendada: 1280x640, &lt;1MB. Faça upload em: Repository Settings → Social Preview.*
+See [LICENSE](./LICENSE) for details.
 
 ---
 
-## 🔖 GitHub Repository Metadata
-
-### About sugerido
-```txt
-Brazilian open-data atlas: ingest, validate, score quality, map indicators and publish methodological public reports.
-```
-
-### Topics sugeridos
-```txt
-open-data
-civic-tech
-brazil
-data-quality
-geovisualization
-maplibre
-duckdb
-fastapi
-nextjs
-typescript
-python
-analytics-engineering
-portfolio-project
-public-data
-education-data
-```
-
----
-
-## 👤 Autor / Author
-
-Desenvolvido por **Felipe Alirio Baruja**.
-
-- **Portfolio:** [barujafe.vercel.app](https://barujafe.vercel.app/)
-- **GitHub:** [@BarujaFe1](https://github.com/BarujaFe1)
-- **LinkedIn:** [Gustavo Felipe Alirio Baruja](https://www.linkedin.com/in/barujafe/)
-
----
-
-## 📄 Licença / License
-
-MIT License. Copyright (c) 2026 Felipe Alirio Baruja.
-
-Veja o arquivo [`LICENSE`](./LICENSE).
+<div align="center">
+  <p><strong>PublicData Atlas BR</strong></p>
+  <p>Atlas cívico com qualidade e método visíveis.</p>
+  <p><em>Civic atlas with visible quality and method.</em></p>
+</div>
